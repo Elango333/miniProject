@@ -38,7 +38,7 @@ public class AdminFeaturesPage {
 			 adminFunc.viewBookedConcertDetails();
 			 break;
 		 case 4:
-			 UpdateConcertDetailsSubclass updateConcert = new UpdateConcertDetailsSubclass();
+			 UpdateConcertDetails updateConcert = new UpdateConcertDetails();
 			 updateConcert.toAskUpdateField();
 			 break;
 		 case 5:

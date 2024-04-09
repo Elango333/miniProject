@@ -2,7 +2,7 @@ package com.bookingFunctionality;
 
 import java.util.Scanner;
 
-public class PaymentSubclass extends Payments {
+public class PaymentFunction implements PaymentInterface {
 
   @Override
   public void getPayment(BookingDTO bookingDetails) {

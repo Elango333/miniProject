@@ -34,7 +34,7 @@ public class BookingDAO {
           "Available Tickets        : " + resultSet.getInt(8) + "\n" +
                             "------ ------ ------\n");
       }
-      BookTicketSubclass bookingTicket = new BookTicketSubclass();
+      BookTicketFunctions bookingTicket = new BookTicketFunctions();
       bookingTicket.askToBookTickets();
     } catch (SQLException e) {
       System.out.println("SQL Exception occurred in viewAllConcerts method");
@@ -58,7 +58,7 @@ public class BookingDAO {
       if (resultSetForAmount.next()) {
         bookingDTO.setAmount(ticketCount * (resultSetForAmount.getInt(1)));
       }
-      PaymentSubclass payment = new PaymentSubclass();
+      PaymentFunction payment = new PaymentFunction();
       payment.getPayment(bookingDTO);
     } catch (SQLException e) {
       System.out.println("SQL Exception occurred in getCustomerID method");
@@ -99,7 +99,7 @@ public class BookingDAO {
   }
 
   public void filterByConcertName() {
-    BookTicketSubclass bookingTicket = new BookTicketSubclass();
+    BookTicketFunctions bookingTicket = new BookTicketFunctions();
     Scanner filterByConcertNameSnr = new Scanner(System.in);
     filterByConcertNameSnr.useDelimiter("\\n");
 
@@ -155,7 +155,7 @@ public class BookingDAO {
   }
 
   public void filterBySinger() {
-    BookTicketSubclass bookingTicket = new BookTicketSubclass();
+    BookTicketFunctions bookingTicket = new BookTicketFunctions();
     Scanner filterBySingerSnr = new Scanner(System.in);
     filterBySingerSnr.useDelimiter("\\n");
 
@@ -210,7 +210,7 @@ public class BookingDAO {
   }
 
   public void filterByCity() {
-    BookTicketSubclass bookingTicket = new BookTicketSubclass();
+    BookTicketFunctions bookingTicket = new BookTicketFunctions();
     Scanner filterByCitySnr = new Scanner(System.in);
     filterByCitySnr.useDelimiter("\\n");
     try {
@@ -264,7 +264,7 @@ public class BookingDAO {
   }
 
   public void filterByDate() {
-      BookTicketSubclass bookingTicket = new BookTicketSubclass();
+      BookTicketFunctions bookingTicket = new BookTicketFunctions();
     Scanner filterByDateSnr = new Scanner(System.in);
     filterByDateSnr.useDelimiter("\\n");
     try {

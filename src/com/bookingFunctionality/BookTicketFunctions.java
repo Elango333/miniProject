@@ -2,7 +2,7 @@ package com.bookingFunctionality;
 
 import java.util.Scanner;
 
-public class BookTicketSubclass extends BookTickets implements BookingTicketsInterface{
+public class BookTicketFunctions extends BookTickets implements BookingTicketsInterface{
   BookingDAO bookingFunc = new BookingDAO();
   @Override
   public void bookTickets() {

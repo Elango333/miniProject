@@ -1,7 +1,9 @@
 package com.bookingFunctionality;
 
 import java.util.Scanner;
-import com.customer.ViewProfileSubclass;
+
+import com.customer.CustomerDAO;
+import com.login.Login;
 
 public class FeaturesPage {
 
@@ -23,18 +25,18 @@ public class FeaturesPage {
 
     switch (options) {
     case 1:
-      ViewProfileSubclass viewprofile = new ViewProfileSubclass();
-      viewprofile.viewProfile();
+    	CustomerDAO customerFunc = new CustomerDAO();
+		customerFunc.GetCustomerDetails(Login.customerName);
       break;
 
     case 2:
-      BookTicketSubclass bookticket = new BookTicketSubclass();
+      BookTicketFunctions bookticket = new BookTicketFunctions();
       bookticket.bookTickets();
       break;
 
     case 3:
-      ViewBookedConcertDetailsSubclass viewConcertdetails = new ViewBookedConcertDetailsSubclass();
-      viewConcertdetails.viewConcertDetails();
+    	BookingDAO bookingFunc = new BookingDAO();
+		bookingFunc.viewConcertDetails();
       break;
 
     case 4:
